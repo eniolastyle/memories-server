@@ -9,7 +9,7 @@ echo "
 sudo apt-get update
 
 # add nodejs 10 ppa (personal package archive) from nodesource
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+# curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
 # install nodejs and npm
 sudo apt-get install -y nodejs
@@ -44,14 +44,13 @@ echo "
 echo "
 ----------------------
   PM2
-
-  pm2 start app.js --env production
-  pm2 status
-  pm2 save
-  pm2 startup 
-  pm2 stop all
 ----------------------
 "
+# pm2 start app.js --env production
+#   pm2 status
+#   pm2 save
+#   pm2 startup 
+#   pm2 stop all
 
 # install pm2 with npm
 sudo npm install -g pm2
