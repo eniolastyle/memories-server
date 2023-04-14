@@ -7,13 +7,16 @@ echo "
 "
 
 sudo apt-get update
+sudo apt remove nodejs
+sudo apt install curl
 
 # add nodejs 10 ppa (personal package archive) from nodesource
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+# curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 # install nodejs and npm
-sudo apt install -y nodejs
-sudo apt install npm -y
+sudo apt-get install -y nodejs
+# sudo apt install npm -y
 
 
 
@@ -24,7 +27,7 @@ echo "
 "
 
 # install pm2 with npm
-sudo npm install -g pm2 -y
+sudo npm install -g pm2
 
 # set pm2 to start automatically on system startup
 sudo pm2 startup systemd
