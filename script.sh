@@ -12,8 +12,8 @@ sudo apt-get update
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
 # install nodejs and npm
-apt-get install -y nodejs
-apt-get install npm
+sudo apt install -y nodejs
+sudo apt install npm -y
 
 
 echo "
