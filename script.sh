@@ -6,17 +6,16 @@ echo "
 ----------------------
 "
 
-sudo apt-get update
-sudo apt-get remove nodejs -y
-# sudo apt-get install curl -y
+sudo apt-get purge nodejs
+sudo apt-get autoremove
 
-# add nodejs 10 ppa (personal package archive) from nodesource
-# curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-# curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install software-properties-common
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
-# install nodejs and npm
-sudo apt-get install -y nodejs 
-sudo apt-get install -y npm 
+sudo apt-get install nodejs
+
+node -v
+npm -v
 
 
 echo "
