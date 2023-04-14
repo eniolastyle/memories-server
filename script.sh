@@ -10,8 +10,13 @@ sudo apt-get purge nodejs || true
 sudo apt-get autoremove || true
 sudo apt-get remove nodejs || true
 
+dpkg -l | grep node
+dpkg -r nodejs-doc
+
 # add nodejs 10 ppa (personal package archive) from nodesource
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+
+sudo apt-get update
 
 # install nodejs and npm
 sudo apt-get install -y nodejs
