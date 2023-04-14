@@ -7,15 +7,15 @@ echo "
 "
 
 sudo apt-get update
-sudo apt remove nodejs
-sudo apt install curl
+sudo apt-get remove nodejs -y
+sudo apt-get install curl -y
 
 # add nodejs 10 ppa (personal package archive) from nodesource
 # curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
 # install nodejs and npm
-sudo apt-get install -y nodejs
+sudo apt-get install nodejs -y
 # sudo apt install npm -y
 
 
