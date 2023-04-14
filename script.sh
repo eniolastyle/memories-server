@@ -9,11 +9,11 @@ echo "
 sudo apt-get update
 
 # add nodejs 10 ppa (personal package archive) from nodesource
-# curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 # install nodejs and npm
 sudo apt install -y nodejs
-sudo apt install -y npm
+sudo apt install npm -y
 
 
 
