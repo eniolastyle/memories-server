@@ -28,5 +28,5 @@ jobs:
             sudo cp default /etc/nginx/sites-available/ -r
             sudo pm2 kill
             pm2 start index.js
-            sudo systemctl stop nginx || true
-            sudo systemctl start nginx
+            sudo systemctl kill nginx || true
+            sudo systemctl restart nginx
