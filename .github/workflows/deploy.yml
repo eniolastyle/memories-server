@@ -24,9 +24,10 @@ jobs:
             cd memories-server
             sh script.sh
             npm install
-            sudo rm -rf /etc/nginx/sites-available/default
+            sudo rm /etc/nginx/sites-available/default
             sudo cp default /etc/nginx/sites-available/ -r
             sudo pm2 kill
             pm2 start index.js
             sudo systemctl kill nginx || true
             sudo systemctl restart nginx
+            curl http://localhost:5000
