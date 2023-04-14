@@ -13,6 +13,9 @@ sudo apt-get remove nodejs || true
 dpkg -l | grep node
 dpkg -r nodejs-doc
 
+sudo apt-get clean
+sudo apt-get update && sudo apt-get upgrade
+
 # add nodejs 10 ppa (personal package archive) from nodesource
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
