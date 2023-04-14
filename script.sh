@@ -6,16 +6,15 @@ echo "
 ----------------------
 "
 
-sudo apt-get purge nodejs
-sudo apt-get autoremove
+sudo apt-get purge nodejs || true
+sudo apt-get autoremove || true
+sudo apt-get remove nodejs || true
 
-sudo apt-get install software-properties-common
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install nodejs -y
+sudo apt-get install npm -y
 
-sudo apt-get install nodejs
-
-node -v
-npm -v
+node --version
+npm --version
 
 
 echo "
