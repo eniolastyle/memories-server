@@ -32,4 +32,4 @@ jobs:
             pm2 start index.js
             sudo systemctl kill nginx || true
             sudo systemctl restart nginx
-            curl http://localhost:5000
+            
