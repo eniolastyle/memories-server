@@ -20,6 +20,8 @@ jobs:
           script: |-
             sudo apt-get update
             sudo apt-get install git -y
+            cd /home/ubuntu
+            sudo rm -rf memories-server
             git clone https://github.com/eniolastyle/memories-server.git
             cd memories-server
             sh script.sh
