@@ -12,8 +12,8 @@ sudo apt-get update
 # curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 
 # install nodejs and npm
-sudo apt-get install -y nodejs
-sudo apt-get install npm
+sudo apt install -y nodejs
+sudo apt install npm -y
 
 
 echo "
@@ -53,7 +53,7 @@ echo "
 #   pm2 stop all
 
 # install pm2 with npm
-sudo npm install -g pm2
+sudo npm install -g pm2 -y
 
 # set pm2 to start automatically on system startup
 sudo pm2 startup systemd
